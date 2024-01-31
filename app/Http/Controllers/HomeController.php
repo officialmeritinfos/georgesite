@@ -242,6 +242,32 @@ class HomeController extends Controller
 
         return view('home.gold',$dataView);
     }
+    public function cryptocurrency()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'Cryptocurrency Investment Package',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.cryptocurrency',$dataView);
+    }
+    public function affiliate()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'Affiliate',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.affiliate',$dataView);
+    }
     public function retirement()
     {
         $web = GeneralSetting::where('id',1)->first();
@@ -249,7 +275,7 @@ class HomeController extends Controller
         $dataView = [
             'siteName'  => $web->name,
             'web'       => $web,
-            'pageName'  => 'Retirement',
+            'pageName'  => 'RETIREMENT AND PENSION FUND INVESTMENTS PACKAGE',
             'packages'  => Package::where('status',1)->get()
         ];
 
