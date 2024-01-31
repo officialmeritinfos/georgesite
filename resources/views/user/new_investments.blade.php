@@ -56,12 +56,15 @@
                             <select type="number" class="form-control form-control-lg" id="inputAddress2"
                                     name="account">
                                 <option value="">Select a Account</option>
-                                <option value="1"> New Deposit</option>
-                                <option value="2">Account Balance</option>
+
+                                <option value="1"> Account Balance</option>
+                                @if($user->canCompound==1)
+                                    <option value="2">Reinvestment from Account Balance</option>
+                                @endif
                             </select>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Deposit</button>
+                            <button type="submit" class="btn btn-primary">Invest</button>
                         </div>
                     </form>
                 </div>

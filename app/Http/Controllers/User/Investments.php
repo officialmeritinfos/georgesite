@@ -29,7 +29,7 @@ class Investments extends Controller
             'web'=>$web,
             'user'=>$user,
             'investments'=>Investment::where('user',$user->id)->paginate(15),
-            'pageName'=>'Deposit Lists',
+            'pageName'=>'Investment Lists',
             'siteName'=>$web->name
         ];
 
@@ -44,7 +44,7 @@ class Investments extends Controller
         $dataView = [
             'web'=>$web,
             'user'=>$user,
-            'pageName'=>'New Deposit',
+            'pageName'=>'New Investment',
             'siteName'=>$web->name,
             'packages'=>Package::where('status',1)->get(),
             'coins'=>Coin::where('status',1)->get(),
@@ -117,7 +117,7 @@ class Investments extends Controller
                 break;
         }
 
-        if ($input['account']!=1 && $balance < $input['amount'] && $packageHasLoan !=1){
+        if ($balance < $input['amount'] && $packageHasLoan !=1){
             return back()->with('error','Insufficient balance in profit account.');
         }
 
@@ -132,6 +132,7 @@ class Investments extends Controller
         $roi = $packageExists->roi;
         $profitPerReturn = $input['amount']*($roi/100);
         $nextReturn = strtotime($returnType->duration,time());
+        $capitalReturn = strtotime($packageExists->capitalDuration,time());
         $ref =$this->generateId('investments','reference',15);
         //check if amount is more than minimum deposit
         if ($web->minDeposit > $input['amount'] && $input['account']==1){
@@ -143,7 +144,8 @@ class Investments extends Controller
             'nextReturn'=>$nextReturn,'currentReturn'=>0,'returnType'=>$returnType->id,
             'numberOfReturns'=>$packageExists->numberOfReturns,'status'=>$status,'duration'=>$packageExists->Duration,
             'package'=>$packageExists->id,
-            'wallet'=>$coinExists->address,'asset'=>$coinExists->asset
+            'wallet'=>$coinExists->address,'asset'=>$coinExists->asset,
+            'capitalDuration'=>$packageExists->capitalDuration,'timeWithdrawCapital'=>$capitalReturn
         ];
 
         $investment = Investment::create($dataInvestment);
@@ -194,7 +196,7 @@ class Investments extends Controller
         $dataView = [
             'user'=>$user,
             'web'=>$web,
-            'pageName'=>'Deposit Detail',
+            'pageName'=>'Investment Detail',
             'siteName'=>$web->name,
             'investment'=>$investment,
         ];

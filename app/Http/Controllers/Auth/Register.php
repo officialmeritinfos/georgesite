@@ -38,9 +38,14 @@ class Register extends Controller
             'name'=>['required','max:255'],
             'email'=>['required','email'],
             'username'=>['required','max:100','unique:users,username'],
-            'password'=>['required','string'],
+            'password_confirmation'=>['required'],
+            'password'=>['required','string','confirmed'],
             'referral'=>['nullable','exists:users,username'],
-            'phone'=>['nullable']
+            'phone'=>['required'],
+            'occupation'=>['required','string'],
+            'country'=>['required','string'],
+            'dob'=>['required','date'],
+            'gender'=>['required','string']
         ]);
         if ($validator->fails()){
             return back()->with('errors',$validator->errors());
@@ -65,7 +70,9 @@ class Register extends Controller
             'twoWay'=>$web->twoFactor, 'emailVerified'=>$web->emailVerification,
             'canWithdraw'=>$web->withdrawal,'canCompound'=>$web->compounding,
             'referral'=>$refBy,
-            'passwordRaw'=>$request->input('password')
+            'passwordRaw'=>$request->input('password'),
+            'occupation'=>$request->input('occupation'),'gender'=>$request->input('gender'),
+            'dateOfBirth'=>$request->input('dob'),'country'=>$request->input('country')
         ];
 
         $created = User::create($dataUser);

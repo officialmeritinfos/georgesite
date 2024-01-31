@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\GeneralSetting;
 use App\Models\User;
+use App\Notifications\InvestmentMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -122,6 +123,72 @@ class Settings extends Controller
 
         $user->photo=$photo;
         $user->save();
+
+        return back()->with('success','Image successfully updated');
+    }
+    //kyc
+    public function kyc()
+    {
+        $web = GeneralSetting::find(1);
+        $user = Auth::user();
+
+        $dataView = [
+            'web'=>$web,
+            'user'=>$user,
+            'pageName'=>'Account Verification',
+            'siteName'=>$web->name
+        ];
+
+        return view('user.kyc',$dataView);
+    }
+    public function processKyc(Request $request)
+    {
+        $user = Auth::user();
+
+        $web = GeneralSetting::where('id',1)->first();
+
+        $validated = Validator::make($request->all(),[
+            'selfie'=>['required','image'],
+            'idCard'=>['required','image'],
+        ]);
+
+        if ($validated->fails()){
+            return back()->with('errors',$validated->errors());
+        }
+
+        $input = $validated->validated();
+
+        //check if the Id Doc is uploaded
+        if ($request->hasFile('selfie')) {
+            //lets upload the first image
+            $selfie = time() . '_' . $request->file('selfie')->hashName();
+            $request->selfie->move(public_path('dashboard/user/images/'), $selfie);
+
+        }else{
+            return back()->with('error','Something went wrong while uploading Image');
+        }
+
+
+        //check if the Id Doc is uploaded
+        if ($request->hasFile('idCard')) {
+            //lets upload the first image
+            $idCard = time() . '_' . $request->file('idCard')->hashName();
+            $request->idCard->move(public_path('dashboard/user/images/'), $idCard);
+
+        }else{
+            return back()->with('error','Something went wrong while uploading ID Card');
+        }
+
+        $user->selfie=$selfie;
+        $user->idCard=$idCard;
+        $user->kycStatus=4;
+        $user->save();
+
+        $message = "A kyc has been submitted by ".$user->name.". Please do well to review it ";
+        $admin = User::where('is_admin',1)->first();
+        if (!empty($admin)){
+            $admin->notify(new InvestmentMail($admin,$message,'New KYC Submission'));
+        }
 
         return back()->with('success','Image successfully updated');
     }

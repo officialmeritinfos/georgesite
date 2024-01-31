@@ -1,479 +1,517 @@
 @extends('home.base')
 @section('content')
 
-    <!-- Start Main Banner Area -->
-    <section class="main-banner-area main-banner-area-two">
-        <div class="container-fluid">
+
+    <section class="banner-one" id="banner" style="background-image: url({{asset('home/lassets/images/background/banner-bg-1-1.png')}});">
+
+        <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-1.png')}}" alt="" class="banner-one__shape-1">
+        <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-2.png')}}" alt="" class="banner-one__shape-2">
+
+        <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-4.png')}}" alt="" class="banner-one__shape-4">
+        <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-5.png')}}" alt="" class="banner-one__shape-5">
+        <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-6.png')}}" alt="" class="banner-one__shape-6">
+        <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-7.png')}}" alt="" class="banner-one__shape-7">
+
+        <div class="container">
+            <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-3.png')}}" alt="" class="banner-one__shape-moc-1">
+            <img src="{{asset('home/img/trading1.png')}}" alt="" class="banner-one__moc">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="banner-text">
-                        <h1>World’s Leading AI-powered Investment Company</h1>
-                        <p>Embark on a journey to financial excellence with <strong>{{$siteName}}</strong>, the world's leading AI-powered investment company. Elevate your investments with cutting-edge technology, expert strategies, and a global perspective. Your financial future, redefined.</p>
-                        <div class="banner-btn">
-                            <a class="default-btn" href="{{route('register')}}">
-                                Get Started
-                            </a>
-                            <a class="default-btn" href="{{route('login')}}">
-                                Login
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="banner-main-img banner-one-main-img">
-                        <img src="{{asset('home/img/home-two-banner/banner-two-main-img.png')}}" alt="Image">
-                    </div>
-                    <div class="banner-img">
-                        <img class="wow fadeInDown" data-wow-delay=".1s" src="{{asset('home/img/home-two-banner/banner-two-shape/1.png')}}" alt="Image">
-                        <div class="wow fadeInDown" data-wow-delay=".3s">
-                            <div class="square-img">
-                                <img class="wow fadeInDown" data-wow-delay=".3s" src="{{asset('home/img/home-two-banner/banner-two-shape/2.png')}}" alt="Image">
-                            </div>
-                        </div>
-                        <img class="wow fadeInDown" data-wow-delay=".6s" src="{{asset('home/img/home-two-banner/banner-two-shape/3.png')}}" alt="Image">
-                        <div class="wow zoomIn" data-wow-delay=".9s">
-                            <div class="circle-img">
-                                <img  src="{{asset('home/img/home-two-banner/banner-two-shape/4.png')}}"  alt="Image">
-                            </div>
-                        </div>
-                        <img src="{{asset('home/img/home-two-banner/banner-two-shape/5.png')}}" alt="Image">
-                        <img class="wow fadeInDown" data-wow-delay=".6s" src="{{asset('home/img/home-two-banner/banner-two-shape/6.png')}}" alt="Image">
-                        <img class="wow fadeInDown" data-wow-delay=".6s" src="{{asset('home/img/home-two-banner/banner-two-shape/7.png')}}" alt="Image">
-                        <img class="wow fadeInRight" data-wow-delay=".9s" src="{{asset('home/img/home-two-banner/banner-two-shape/8.png')}}" alt="Image">
-                        <img class="wow fadeInRight" data-wow-delay=".9s" src="{{asset('home/img/home-two-banner/banner-two-shape/9.png')}}" alt="Image">
-                        <img class="wow fadeInRight" data-wow-delay="1s" src="{{asset('home/img/home-two-banner/banner-two-shape/10.png')}}" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="over-shape">
-            <img src="{{asset('home/img/home-one-banner/banner-one-shape/1.png')}}" alt="Image">
-            <img src="{{asset('home/img/home-one-banner/banner-one-shape/2.png')}}" alt="Image">
-            <img src="{{asset('home/img/home-one-banner/banner-one-shape/3.png')}}" alt="Image">
-        </div>
-    </section>
-    <!-- End Main Banner Area -->
+                <div class="col-lg-7">
+                    <div class="banner-one__content">
+                        <p class="banner-one__tag-line">Welcome to {{$siteName}} <a href="login">Join Now</a></p>
+                        <h3>We help achieve <br> financial goals</h3>
+                        <p>We are committed to providing our customers with exceptional financial service <br> while offering our
+                            employees
+                            the best training.</p>
+                        <a href="login" class="thm-btn banner-one__btn scroll-to-target">Get Started</a><!-- /.thm-btn banner-one__btn -->
+                    </div><!-- /.banner-one__content -->
+                </div><!-- /.col-lg-7 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.banner-one -->
 
-    <!-- Start features Area -->
-    <section class="features-area mt-minus-70 pb-70">
+
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+
+
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"><span class="blue-text">Exchange Rates</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+            {
+                "width": "100%",
+                "height": 400,
+                "currencies": [
+                "EUR",
+                "USD",
+                "JPY",
+                "GBP",
+                "CHF",
+                "AUD",
+                "CAD",
+                "NZD",
+                "CNY"
+            ],
+                "isTransparent": false,
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <section class="service-one" id="features">
         <div class="container">
+            <div class="block-title text-center">
+                <span class="block-title__bubbles"></span>
+                <p>Checkout Our Features</p>
+                <h3>The Only Platform You’ll Need</h3>
+            </div><!-- /.block-title -->
             <div class="row">
-                <div class="col-lg-4 col-sm-6 p-0">
-                    <div class="single-features">
-                        <i class="flaticon-cloud-computing-1"></i>
-                        <h3>AI-Powered Trading Revolution</h3>
-                        <p>
-                            Dive into the future of finance with {{$siteName}}'s groundbreaking AI-powered trading solutions. Our
-                            sophisticated algorithms analyze market trends in real-time, empowering you with unparalleled insights. Experience the next level of precision and profitability in your investments.
-                        </p>
+                <div class="service-one__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="000ms">
+                    <div class="service-one__single">
+                        <i class="zimed-icon-responsive"></i>
+                        <h3>Instant Withdrawal</h3>
+                    </div><!-- /.service-one__single -->
+                </div><!-- /.service-one__col -->
+                <div class="service-one__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                    <div class="service-one__single">
+                        <i class="zimed-icon-computer-graphic"></i>
+                        <h3>Quick Access</h3>
+                    </div><!-- /.service-one__single -->
+                </div><!-- /.service-one__col -->
+                <div class="service-one__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                    <div class="service-one__single">
+                        <i class="zimed-icon-development1"></i>
+                        <h3>Manage Users</h3>
+                    </div><!-- /.service-one__single -->
+                </div><!-- /.service-one__col -->
+                <div class="service-one__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                    <div class="service-one__single">
+                        <i class="zimed-icon-development"></i>
+                        <h3>Fully Secured</h3>
+                    </div><!-- /.service-one__single -->
+                </div><!-- /.service-one__col -->
+                <div class="service-one__col wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="400ms">
+                    <div class="service-one__single">
+                        <i class="zimed-icon-development"></i>
+                        <h3>247 Customer service</h3>
+                    </div><!-- /.service-one__single -->
+                </div><!-- /.service-one__col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.service-one -->
 
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 p-0">
-                    <div class="single-features">
-                        <i class="flaticon-engineer"></i>
-                        <h3>Diversify and Prosper</h3>
-                        <p>{{$siteName}} is your gateway to a diversified investment portfolio. From Forex trading to medical cannabis, we offer a spectrum of opportunities. Navigate the dynamic landscape of stocks, explore the stability of retirement planning, and embrace the potential of precious metals. Your journey to financial prosperity starts here.</p>
+    <div class="cta-three">
 
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0 p-0">
-                    <div class="single-features">
-                        <i class="flaticon-success"></i>
-                        <h3>Global Vision, Local Impact</h3>
-                        <p>Discover the world of financial possibilities with {{$siteName}}. Our global perspective meets local impact as we navigate the realms of oil and gas investments. Join us in shaping the energy frontier while securing your financial legacy. At {{$siteName}}, your investments transcend borders, guided by AI innovation and a commitment to your success.</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End features Area -->
-
-    <!-- Start About Area -->
-    <section class="about-area pb-100">
+        <img src="{{asset('home/lassets/images/shapes/cta-1-shape-2.png')}}" alt="" class="cta-three__shape-2">
+        <img src="{{asset('home/lassets/images/shapes/cta-1-shape-3.png')}}" alt="" class="cta-three__shape-3">
         <div class="container">
-            <div class="row align-items-center">
+            <img src="{{asset('home/lassets/images/shapes/cta-1-shape-1.png')}}" alt="" class="cta-three__shape-1">
+            <img src="{{asset('home/img/trading2.png')}}" alt="" class="cta-three__moc">
+            <div class="row justify-content-end">
                 <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="{{asset('home/img/about-img-three.png')}}" alt="Image">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <span>About Us</span>
-                        <h2>We make it possible using revolutionary solutions</h2>
-                        <p>Welcome to {{$siteName}}, where financial innovation meets investment excellence. Founded with a vision to redefine wealth creation, we stand at the forefront of the financial industry, combining cutting-edge technology with seasoned expertise. Our journey began with a commitment to empower individuals to navigate the complexities of the financial landscape, and today, {{$siteName}} stands as a beacon of trust and success in the world of investments.</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        Advanced caching
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        Unlimited  solutions
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        24/7 Free extra support
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        Optimized stack
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a class="default-btn" href="{{url('about')}}">
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About Area -->
+                    <div class="cta-three__content">
+                        <div class="block-title text-left">
+                            <span class="block-title__bubbles"></span>
+                            <p>Checkout Our Features</p>
+                            <h3>Control Everything From One Platform</h3>
+                        </div><!-- /.block-title -->
+                        <div class="cta-three__box-wrap">
+                            <div class="cta-three__box">
+                                <div class="cta-three__box-icon">
+                                    <i class="zimed-icon-strategy"></i>
+                                </div><!-- /.cta-three__box-icon -->
+                                <div class="cta-three__box-content">
+                                    <h3>Fully secured</h3>
+                                    <p>Your account is fully secured by our hybrid system encrypted by SSL Comodo Certificate.</p>
+                                </div><!-- /.cta-three__box-content -->
+                            </div><!-- /.cta-three__box -->
+                            <div class="cta-three__box">
+                                <div class="cta-three__box-icon">
+                                    <i class="zimed-icon-training"></i>
+                                </div><!-- /.cta-three__box-icon -->
+                                <div class="cta-three__box-content">
+                                    <h3>High ROI</h3>
+                                    <p>Our platform is built to produce high Return on Investment to for our customers</p>
+                                </div><!-- /.cta-three__box-content -->
 
-    <!-- Start What We Offer Area -->
-    <section class="offer-area offer-area-two pt-100 pb-70">
+                            </div><!-- /.cta-three__box -->
+                        </div><!-- /.cta-three__box-wrap -->
+                        <a href="login" class="thm-btn cta-three__btn">Discover More</a><!-- /.thm-btn cta-three__btn -->
+                    </div><!-- /.cta-three__content -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.cta-three -->
+
+    <section class="pricing-one" id="pricing">
         <div class="container">
-            <div class="section-title">
-                <span>Services</span>
-                <h2>Our Professionals Services For You</h2>
-            </div>
-            <div class="row">
-                @foreach($services as $service)
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="single-offer">
-                            <i class="flaticon-chip"></i>
-                            <h3>{{$service->title}}</h3>
-                            <p>{{$service->short}}</p>
-                        </div>
-                    </div>
-                @endforeach
+            <div class="pricing-one__sep"></div><!-- /.pricing-one__sep -->
+            <div class="block-title text-center">
+                <span class="block-title__bubbles"></span>
 
-            </div>
-        </div>
-        <div class="offer-shape">
-            <img src="{{asset('home/img/shape/offer-shape/1.png')}}" alt="Image">
-            <img src="{{asset('home/img/shape/offer-shape/2.png')}}" alt="Image">
-            <img src="{{asset('home/img/shape/offer-shape/3.png')}}" alt="Image">
-            <img src="{{asset('home/img/shape/offer-shape/4.png')}}" alt="Image">
-            <img src="{{asset('home/img/shape/offer-shape/5.png')}}" alt="Image">
-            <img src="{{asset('home/img/shape/offer-shape/5.png')}}" alt="Image">
-            <img src="{{asset('home/img/shape/offer-shape/6.png')}}" alt="Image">
-        </div>
-    </section>
-    <!-- End What We Offer Area -->
+                <h3>Plans</h3>
+            </div><!-- /.block-title -->
 
-    <!-- Start Pricing Area -->
-    <section class="pricing-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>What We Offer</span>
-                <h2>Our Plans For You</h2>
-            </div>
-            <div class="tab quote-list-tab">
+            <div class="tabed-content">
+                <div id="month">
+                    <div class="row justify-content-center">
+                        @foreach($packages as $package)
+                            @inject('option','App\Defaults\Custom')
+                            <div class="col-lg-4 wow fadeInUp mt-3" data-wow-duration="1500ms">
+                                <div class="pricing-one__single">
+                                    <div class="pricing-one__inner">
+                                        <img src="{{asset('home/lassets/images/shapes/pricing-line-1-1.png')}}" alt="" class="pricing-one__line">
+                                        <img src="{{asset('home/lassets/images/shapes/pricing-icon-1-2.png')}}" alt="" class="pricing-one__icon">
+                                        <h3>${{$package->minAmount}} / <small>{{$package->roi}}% After {{$package->Duration}}</small></h3>
+                                        <p>{{$package->name}}</p>
+                                        <ul class="list-unstyled pricing-one__list">
 
-                <div class="tab_content">
-                    <div class="tabs_item">
-                        <div class="row justify-content-center">
-                            @foreach($packages as $package)
-                                @inject('option','App\Defaults\Custom')
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="single-pricing">
-                                        <div class="pricing-top-heading">
-                                            <h3>{{$package->name}}</h3>
-                                        </div>
-                                        <span>{{$package->numberOfReturns*$package->roi}}%<sub>/{{$option->getReturnType($package->returnType)}}</sub></span>
-                                        <ul>
-                                            <li>
-                                                <i class="flaticon-checked-1"></i>
-                                                Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                            <li><i class="fa fa-check"></i> Minimum: ${{$package->minAmount}}</li>
+                                            <li><i class="fa fa-check"></i> Maximum: @if($package->isUnlimited !=1)
                                                     ${{number_format($package->maxAmount,2)}}
                                                 @else
                                                     Unlimited
-                                                @endif
-                                            </li>
-                                            <li>
-                                                <i class="flaticon-checked-1"></i>
-                                                Profit return: {{$package->numberOfReturns*$package->roi}}% {{$option->getReturnType($package->returnType)}}
-                                            </li>
-                                            <li>
-                                                <i class="flaticon-checked-1"></i>
-                                                Contract Duration: {{$package->Duration}}
-                                            </li>
-                                            <li>
-                                                <i class="flaticon-checked-1"></i>
-                                                Referral Bonus: {{$package->referral}}%
-                                            </li>
-                                        </ul>
-                                        <a class="default-btn" href="{{route('register')}}">
-                                            Get Started
-                                        </a>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
+                                                @endif</li>
+                                            <li><i class="fa fa-check"></i> Duration: {{$package->Duration}}</li>
+                                            <li><i class="fa fa-check"></i> Quality investment Experience</li>
+                                            <li><i class="fa fa-check"></i> 24/7 phone and email support</li>
+                                            <li><i class="fa fa-check"></i> Instant Withdrawal</li>
+                                        </ul><!-- /.list-unstyled pricing-one__list -->
+                                        <a href="{{route('register')}}" class="thm-btn pricing-one__btn">Get Started</a><!-- /.thm-btn -->
+                                    </div><!-- /.pricing-one__inner -->
+                                </div><!-- /.pricing-one__single -->
+                            </div><!-- /.col-lg-4 -->
+                        @endforeach
 
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Pricing Area -->
+                    </div><!-- /.row -->
+                </div><!-- /#month -->
 
-    <!-- Start Business Area -->
-    <section class="business-area ptb-100">
+
+
+            </div><!-- /.tabed-content -->
+
+        </div><!-- /.container -->
+    </section><!-- /.pricing-one -->
+
+    <section class="cta-two">
+        <img src="{{asset('home/lassets/images/shapes/cta-2-shape-1.png')}}" alt="" class="cta-two__shape-1">
+        <img src="{{asset('home/lassets/images/shapes/cta-2-shape-2.png')}}" alt="" class="cta-two__shape-2">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="business-content">
-                        <h2>Plan for the future with {{$siteName}}</h2>
-                    </div>
-                    <div class="single-business">
-                        <i class="flaticon-chip"></i>
-                        <h3>Strategic Wealth Planning</h3>
-                        <p>At {{$siteName}}, we believe in more than just investing; we believe in strategic wealth planning. Our team of experts collaborates with you to craft a personalized roadmap for financial success. From short-term gains to long-term legacies, we meticulously plan every step, ensuring your investments align with your aspirations. Join us in redefining the art of wealth creation through strategic planning and astute decision-making.</p>
-                    </div>
-                    <div class="single-business">
-                        <i class="flaticon-blockchain"></i>
-                        <h3>Discover Your Financial Horizon</h3>
-                        <p>Embark on a personalized financial journey with {{$siteName}}, where we help you uncover the vast potential of your financial horizon. Our tailored strategies and innovative solutions are designed to align with your unique goals, ensuring a path to prosperity that's as individual as you are. Let {{$siteName}} be your compass as you navigate towards a secure and rewarding financial future.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="100">00</span> <span class="target">M+</span>
-                                </h2>
-                                <p>Payouts made</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="90">00</span> <span class="target">+</span>
-                                </h2>
-                                <p>Staff</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="80">00</span> <span class="target">k+</span>
-                                </h2>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="5">00</span> <span class="target">+</span>
-                                </h2>
-                                <p>Awards Won</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Business Area -->
-
-    <!-- Start Client Area -->
-    <section class="client-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Testimonial</span>
-                <h2>What users Say About Us</h2>
-            </div>
-            <div class="client-wrap owl-carousel owl-theme">
-                <div class="single-client">
-                    <i class="quotes flaticon-left-quotes-sign"></i>
-                    <p>"{{$siteName}} has been a game-changer for my investments. The combination of AI precision and a diverse portfolio has not only safeguarded my wealth but propelled it to new heights. Trustworthy, innovative, and truly a partner in financial success."</p>
-                    <ul>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                    </ul>
-                    <div class="client-img">
-                        <img src="https://ui-avatars.com/api/?name=Johnathan+W.&rounded=true" alt="Image">
-                        <h3>Johnathan W</h3>
-                    </div>
-                </div>
-                <div class="single-client">
-                    <i class="quotes flaticon-left-quotes-sign"></i>
-                    <p>"I never thought investing could be this personalized and rewarding. {{$siteName}}'s tailored strategies aligned perfectly with my retirement goals. Their commitment to staying ahead of market trends is evident, making them my go-to choice for securing my financial future."</p>
-                    <ul>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                    </ul>
-                    <div class="client-img">
-                        <img src="https://ui-avatars.com/api/?name=Sophia+R.&rounded=true" alt="Image">
-                        <h3>Sophia R.</h3>
-                    </div>
-                </div>
-                <div class="single-client">
-                    <i class="quotes flaticon-left-quotes-sign"></i>
-                    <p>"As someone new to investing, {{$siteName}} provided the guidance I needed. The team's dedication to educating
-                        clients sets them apart. From understanding Forex to exploring green investments, they made the
-                        complex seem simple. Grateful for their expertise!"</p>
-                    <ul>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                    </ul>
-                    <div class="client-img">
-                        <img src="https://ui-avatars.com/api/?name=David+K.&rounded=true" alt="Image">
-                        <h3>David K.</h3>
-                    </div>
-                </div>
-                <div class="single-client">
-                    <i class="quotes flaticon-left-quotes-sign"></i>
-                    <p>"{{$siteName}}'s global perspective is refreshing. The foray into oil and gas investments appealed to my adventurous
-                        side. Their commitment to making a positive impact while maximizing returns resonates with me. Proud
-                        to be part of the {{$siteName}} success story."</p>
-                    <ul>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                        <li>
-                            <i class="bx bxs-star"></i>
-                        </li>
-                    </ul>
-                    <div class="client-img">
-                        <img src="https://ui-avatars.com/api/?name=Olivia+M.&rounded=true" alt="Image">
-                        <h3>Olivia M.</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Client Area -->
-
-
-    <!-- Strat News Area -->
-    <section class="news-area pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>News</span>
-                <h2>Our Recent News</h2>
-            </div>
+            <img src="{{asset('home/lassets/images/shapes/cta-2-shape-3.png')}}" alt="" class="cta-two__shape-3">
+            <img src="{{asset('home/img/dashboard.png')}}" alt="" class="cta-two__moc">
             <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                    <div class="single-news">
-                        <rssapp-wall id="38kEBNRCi1vuK60z"></rssapp-wall>
-                        <script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End News Area -->
+                <div class="col-xl-5 col-lg-6">
+                    <div class="cta-two__content">
+                        <div class="block-title text-left">
+                            <span class="block-title__bubbles"></span>
+                            <p>Checkout Our Features</p>
+                            <h3>Discover the Powerful Tools For Your Repeat Customers</h3>
+                        </div><!-- /.block-title -->
+                        <p>Our platform is built with sophisticated features that helps our customers to increase their income. </p>
+                        <a href="login" class="thm-btn cta-two__btn">Discover More</a><!-- /.thm-btn cta-two__btn -->
+                    </div><!-- /.cta-two__content -->
+                </div><!-- /.col-lg-5 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.cta-two -->
 
-
-    <!-- Start Brand Area -->
-    <div class="brand-area pb-70">
+    <section class="video-one">
         <div class="container">
-            <div class="brand-list">
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/1.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/2.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/3.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/4.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/5.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/6.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/7.png')}}" alt="Image">
-                    </a>
-                </div>
-                <div class="single-brand">
-                    <a href="#">
-                        <img src="{{asset('home/img/brand/8.png')}}" alt="Image">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Brand Area -->
+            <div class="video-one__box wow fadeInUp" data-wow-duration="1500ms">
+                <img src="{{asset('home/lassets/images/resources/video-1-1.jpg')}}" alt="">
+                <div class="video-one__content">
+                    <a href="https://www.youtube.com/watch?v=wt71GWdsxF0" class="video-popup"><i class="fa fa-play"></i></a>
+                    <h3>How to Buy Bitcoin</h3>
+                </div><!-- /.video-one__content -->
+            </div><!-- /.video-one__box -->
+        </div><!-- /.container -->
+    </section><!-- /.video-one -->
+
+    <section class="funfact-one">
+        <img src="{{asset('home/lassets/images/shapes/pricing-shape-1.png')}}" alt="" class="funfact-one__shape-1">
+        <img src="{{asset('home/lassets/images/shapes/pricing-shape-2.png')}}" alt="" class="funfact-one__shape-2">
+        <img src="{{asset('home/lassets/images/shapes/pricing-shape-3.png')}}" alt="" class="funfact-one__shape-3">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="funfact-one__single">
+                        <h3 class="counter">7420927</h3>
+                        <p>Users</p>
+                    </div><!-- /.funfact-one__single -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="funfact-one__single">
+                        <h3 class="counter">6020</h3>
+                        <p>Staff</p>
+                    </div><!-- /.funfact-one__single -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="funfact-one__single">
+                        <h3 class="counter">52</h3>
+                        <p>Country</p>
+                    </div><!-- /.funfact-one__single -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="funfact-one__single">
+                        <h3 class="counter">200</h3>
+                        <p>Awards</p>
+                    </div><!-- /.funfact-one__single -->
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.funfact-one -->
+
+
+    <section class="app-shot-one" id="app-shots">
+        <img src="{{asset('home/lassets/images/shapes/contact-shape-3.png')}}" alt="" class="app-shot__shape-1">
+        <img src="{{asset('home/lassets/images/shapes/contact-shape-2.png')}}" alt="" class="app-shot__shape-2">
+
+        <div class="container-fluid">
+            <div class="block-title text-center">
+                <span class="block-title__bubbles"></span>
+                <p>Checkout Our Interface</p>
+                <h3>Dasboard Screenshots</h3>
+            </div><!-- /.block-title -->
+            <div class="app-shot-one__carousel thm__owl-carousel owl-theme owl-carousel" data-options='{ "loop": true, "margin": 43, "nav": false, "dots": true, "autoWidth": false, "autoplay": true, "smartSpeed": 700, "autoplayTimeout": 5000, "autoplayHoverPause": true, "slideBy": 5, "responsive": { "0": { "items": 1 }, "480": { "items": 2 }, "600": { "items": 3 }, "991": { "items": 4 }, "1000": { "items": 5 }, "1200": { "items": 5 } } }'>
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-1.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-2.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-3.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-4.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-5.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-1.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-2.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-3.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-4.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-5.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-1.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-2.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-3.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-4.jpg')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/app-shots/app-shot-1-5.jpg')}}" alt="">
+                </div><!-- /.item -->
+            </div><!-- /.app-shot-one__carousel owl-theme owl-carousel -->
+        </div><!-- /.container-fluid -->
+    </section><!-- /.app-shot-one -->
+
+    <section class="testimonials__one" id="testimonials">
+        <img src="{{asset('home/lassets/images/shapes/map-1-1.png')}}" alt="Awesome Image" class="map-img">
+        <img src="{{asset('home/lassets/images/shapes/testi-shape-1.png')}}" alt="" class="testimonials__one-shape-1">
+        <img src="{{asset('home/lassets/images/shapes/testi-shape-2.png')}}" alt="" class="testimonials__one-shape-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <div class="my-auto wow fadeInUp" data-wow-duration="1500ms">
+                        <div id="testimonials-slider-pager">
+                            <div class="testimonials-slider-pager-one">
+                                <a href="#" class="pager-item active" data-slide-index="0"><img src="{{asset('home/lassets/images/testimonials/testi-1-1.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="1"><img src="{{asset('home/lassets/images/testimonials/testi-1-2.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="2"><img src="{{asset('home/lassets/images/testimonials/testi-1-3.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="3"><img src="{{asset('home/lassets/images/testimonials/testi-1-4.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="4"><img src="{{asset('home/lassets/images/testimonials/testi-1-5.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="5"><img src="{{asset('home/lassets/images/testimonials/testi-1-6.jpg')}}" alt="Awesome Image"></a>
+                            </div><!-- /.testimonials-slider-pager-one -->
+                            <div class="testimonials-slider-pager-two">
+                                <a href="#" class="pager-item active" data-slide-index="0"><img src="{{asset('home/lassets/images/testimonials/testi-1-1.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="1"><img src="{{asset('home/lassets/images/testimonials/testi-1-2.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="2"><img src="{{asset('home/lassets/images/testimonials/testi-1-3.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="3"><img src="{{asset('home/lassets/images/testimonials/testi-1-4.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="4"><img src="{{asset('home/lassets/images/testimonials/testi-1-5.jpg')}}" alt="Awesome Image"></a>
+                                <a href="#" class="pager-item" data-slide-index="5"><img src="{{asset('home/lassets/images/testimonials/testi-1-6.jpg')}}" alt="Awesome Image"></a>
+                            </div><!-- /.testimonials-slider-pager-two -->
+                        </div><!-- /#testimonials-slider-pager -->
+                    </div><!-- /.my-auto -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="block-title text-left">
+                        <span class="block-title__bubbles"></span>
+
+                        <h3>What Our Clients Are Saying</h3>
+                    </div><!-- /.block-title -->
+                    <ul class="slider testimonials-slider">
+                        <li class="slide-item">
+                            <div class="testimonials__one__single">
+                                <p>This company has always been a support to me in my financial journey. I give them 5 stars.</p>
+                                <h3>Delila Rayam</h3>
+                            </div><!-- /.testimonials__one__single -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="testimonials__one__single">
+                                <p>At first I never trusted the platform but It has proven otherwise. This platform is a go to place</p>
+                                <h3>Terrilyn Werme</h3>
+                            </div><!-- /.testimonials__one__single -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="testimonials__one__single">
+                                <p>WOW. It has always been a wonderful experience using this platform.</p>
+                                <h3>Kyle Demayo</h3>
+                            </div><!-- /.testimonials__one__single -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="testimonials__one__single">
+                                <p>It's without doubt that {{$siteName}} do deliver as promised. I was able to offset all my debts by using the NPF plan and with consistent approach, I am comfortably stable financially.</p>
+                                <h3>Minta Hadad</h3>
+                            </div><!-- /.testimonials__one__single -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="testimonials__one__single">
+                                <p>I started {{$siteName}} been skeptical due to my previous bad experiences, but now I can confidently say that {{$siteName}} can be trusted 100%. I have made for than 150% in my investment.</p>
+                                <h3>Sherman Cibrian</h3>
+                            </div><!-- /.testimonials__one__single -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="testimonials__one__single">
+                                <p>I started since 2018 after been introduced by a friend and I have made more than $85,000 in profit. Joining {{$siteName}} was my one-time decision that paid off in long-term.</p>
+                                <h3>Adrianne Hagans</h3>
+                            </div><!-- /.testimonials__one__single -->
+                        </li>
+                    </ul>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.testimonials__one -->
+
+    <section class="brand-one brand-one__home-one">
+        <div class="container">
+            <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme" data-options='{"loop": true, "autoplay": true, "autoplayHoverPause": true, "autoplayTimeout": 5000, "items": 5, "dots": false, "nav": false, "margin": 100, "smartSpeed": 700, "responsive": { "0": {"items": 2, "margin": 30}, "480": {"items": 3, "margin": 30}, "991": {"items": 4, "margin": 50}, "1199": {"items": 5, "margin": 100}}}'>
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-1.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-2.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-3.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-4.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-5.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-6.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-1.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-2.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-3.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-4.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-5.png')}}" alt="">
+                </div><!-- /.item -->
+                <div class="item">
+                    <img src="{{asset('home/lassets/images/brand/brand-1-6.png')}}" alt="">
+                </div><!-- /.item -->
+            </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
+        </div><!-- /.container -->
+    </section><!-- /.brand-one -->
+
+
+
+    <section class="blog-one blog-one__home" id="blog">
+        <img src="{{asset('home/lassets/images/shapes/blog-shape-1-1.png')}}" alt="" class="blog-one__shape-1">
+        <div class="container">
+            <div class="block-title text-center">
+                <span class="block-title__bubbles"></span>
+
+                <h3>Our Products</h3>
+            </div><!-- /.block-title -->
+            <div class="row">
+                <div class="col-lg-4 wow fadeInLeft" data-wow-duration="1500ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__image">
+                            <img src="{{asset('home/serv/9.jpg')}}" alt="">
+                        </div><!-- /.blog-one__image -->
+                        <div class="blog-one__content">
+                            <ul class="blog-one__meta list-unstyled">
+                                <li><a href="#"><i class="far fa-clock"></i> 20 Feb</a></li>
+                                <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a></li>
+                            </ul><!-- /.blog-one__meta list-unstyled -->
+                            <h3><a href="#">Learn about gold</a>
+                            </h3>
+                            <a href="#" class="blog-one__link"><i class="zimed-icon-right-arrow"></i></a>
+                            <!-- /.blog-one__link -->
+                        </div><!-- /.blog-one__content -->
+                    </div><!-- /.blog-one__single -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 wow fadeInUp" data-wow-duration="1500ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__image">
+                            <img src="{{asset('home/img/oil.jpg')}}" alt="">
+                        </div><!-- /.blog-one__image -->
+                        <div class="blog-one__content">
+                            <ul class="blog-one__meta list-unstyled">
+                                <li><a href="#"><i class="far fa-clock"></i> 20 Feb</a></li>
+                                <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a></li>
+                            </ul><!-- /.blog-one__meta list-unstyled -->
+                            <h3><a href="#">Oil & Gas Investment</a></h3>
+                            <a href="#" class="blog-one__link"><i class="zimed-icon-right-arrow"></i></a>
+                            <!-- /.blog-one__link -->
+                        </div><!-- /.blog-one__content -->
+                    </div><!-- /.blog-one__single -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 wow fadeInRight" data-wow-duration="1500ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__image">
+                            <img src="{{asset('home/img/crypto.jpg')}}" alt="">
+                        </div><!-- /.blog-one__image -->
+                        <div class="blog-one__content">
+                            <ul class="blog-one__meta list-unstyled">
+                                <li><a href="#"><i class="far fa-clock"></i> 20 Feb</a></li>
+                                <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a></li>
+                            </ul><!-- /.blog-one__meta list-unstyled -->
+                            <h3><a href="#">Cryptocurrency</a></h3>
+                            <a href="#" class="blog-one__link"><i class="zimed-icon-right-arrow"></i></a>
+                            <!-- /.blog-one__link -->
+                        </div><!-- /.blog-one__content -->
+                    </div><!-- /.blog-one__single -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog-one -->
+
+
 
 @endsection

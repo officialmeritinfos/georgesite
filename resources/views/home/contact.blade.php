@@ -1,68 +1,62 @@
 @extends('home.base')
 @section('content')
-    <!-- Start Page Title Area -->
-    <div class="page-title-area">
+    <section class="page-header" style="background-image: url({{asset('home/lassets/images/background/inner-banner-bg.png')}});">
         <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}} </h2>
-                <ul>
-                    <li>
-                        <a href="{{url('/')}}">
-                            Home
-                        </a>
-                    </li>
-                    <li>Pages</li>
-                    <li>{{$pageName}} </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Page Title Area -->
+            <h2>Contact Us</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
 
-    <!-- Start Contact Info Area -->
-    <section class="contact-info-area pt-100 pb-70">
+    <section class="contact-one" id="contact">
+        <img src="{{asset('home/lassets/images/shapes/contact-shape-1.png')}}" alt="" class="contact-one__shape-1">
+        <img src="{{asset('home/lassets/images/shapes/contact-shape-2.png')}}" alt="" class="contact-one__shape-2">
+        <img src="{{asset('home/lassets/images/shapes/contact-shape-3.png')}}" alt="" class="contact-one__shape-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-contact-info">
-                        <i class="bx bx-envelope"></i>
-                        <h3>Email Us:</h3>
-                        <a href="mailto:{{$web->email}}">{{$web->email}}</a>
-                    </div>
-                </div>
-                @if(!empty($web->phone))
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-contact-info">
-                            <i class="bx bx-phone-call"></i>
-                            <h3>Call Us:</h3>
-                            <a href="tel:{{$web->phone}}">Tel. {{$web->phone}}</a>
-                        </div>
-                    </div>
-                @endif
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-contact-info">
-                        <i class="bx bx-location-plus"></i>
-                        <h3>London</h3>
-                        <a href="#">{!! $web->address !!}</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-contact-info">
-                        <i class="bx bx-support"></i>
-                        <h3>Live Chat</h3>
-                        <a href="#">live chat all the time with our company 24/7</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Contact Info Area -->
+                <div class="col-lg-6">
+                    <div class="contact-one__content">
+                        <div class="contact-one__images">
+                            <img src="{{asset('home/lassets/images/resources/contact-1.jpg')}}" class="wow fadeInUp" data-wow-duration="1500ms" alt="">
+                            <img src="{{asset('home/lassets/images/resources/contact-2.jpg')}}" class="wow fadeInUp" data-wow-duration="1500ms" alt="">
+                        </div><!-- /.contact-one__images -->
+                        <div class="contact-one__infos">
+                            <div class="contact-one__infos-single">
+                                <div class="contact-one__infos-icon">
+                                    <i class="zimed-icon-placeholder"></i>
+                                </div><!-- /.contact-one__infos-icon -->
+                                <div class="contact-one__infos-content">
+                                    <h3>Address</h3>
+                                    <p>{!! $web->address !!} </p>
+                                </div><!-- /.contact-one__infos-content -->
+                            </div><!-- /.contact-one__infos-single -->
+                            <div class="contact-one__infos-single">
+                                <div class="contact-one__infos-icon">
+                                    <i class="zimed-icon-message"></i>
+                                </div><!-- /.contact-one__infos-icon -->
+                                <div class="contact-one__infos-content">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:{{$web->email}}">
+                                            {{$web->email}}
+                                        </a></p>
+                                </div><!-- /.contact-one__infos-content -->
+                            </div><!-- /.contact-one__infos-single -->
+                            @if(!empty($web->phone))
+                                <div class="contact-one__infos-single">
+                                    <div class="contact-one__infos-icon">
+                                        <i class="zimed-icon-phone-call"></i>
+                                    </div><!-- /.contact-one__infos-icon -->
+                                    <div class="contact-one__infos-content">
+                                        <h3>Phone</h3>
+                                        <p><a href="tel:{{$web->phone}}">{{$web->phone}}</a></p>
+                                    </div><!-- /.contact-one__infos-content -->
+                                </div><!-- /.contact-one__infos-single -->
+                            @endif
+                        </div><!-- /.contact-one__infos -->
+                    </div><!-- /.contact-one__content -->
+                </div><!-- /.col-lg-6 -->
 
-    <!-- Start Map Area  -->
-    <div class="map-area">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.5033100798687!2d25.2787138!3d54.6831702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd94122c9451db%3A0xcc9812acc73ac262!2sPalangos%20g.%204%2C%2001402%20Vilnius%2C%20Lithuania!5e0!3m2!1sen!2sus!4v1702465594991!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- End Map Area -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.contact-one -->
 
 
 @endsection

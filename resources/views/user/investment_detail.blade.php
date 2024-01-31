@@ -50,6 +50,24 @@
                                         @break
                                     @endswitch
                                 </li>
+
+                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i>
+                                    <span class="me-1 fw-bold">Capital Return Status:</span>
+                                    @switch($investment->capitalReturned)
+                                        @case(1)
+                                            <span class="badge badge-success">Completed</span>
+                                            @break
+                                        @case(2)
+                                            <span class="badge badge-info">Pending</span>
+                                            @break
+                                        @case(3)
+                                            <span class="badge badge-danger">Cancelled</span>
+                                            @break
+                                        @default
+                                            <span class="badge badge-primary">Ongoing</span>
+                                            @break
+                                    @endswitch
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -87,6 +105,7 @@
                                 <th scope="col">Number of Return</th>
                                 <th scope="col">Next Date of Return</th>
                                 <th scope="col">Profit Per Return</th>
+                                <th scope="col"> Date of Capital Return</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -96,6 +115,7 @@
                                 <td>{{number_format($investment->numberOfReturns)}}</td>
                                 <td>{{date('d M Y h:i:s a',$investment->nextReturn)}}</td>
                                 <td>${{number_format($investment->profitPerReturn,2)}}</td>
+                                <td>{{date('d M Y h:i:s a',$investment->timeWithdrawCapital)}}</td>
                             </tr>
                             </tbody>
 
@@ -107,31 +127,31 @@
         </div>
     </div>
 
-    @if($investment->source=='balance')
+{{--    @if($investment->source=='balance')--}}
 
-        <div class="container-fluid mt-5">
-            <div class="alert-email text-center">
-                <img  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{$investment->wallet}}">
-                <span class="email-text">Read the instruction below</span>
+{{--        <div class="container-fluid mt-5">--}}
+{{--            <div class="alert-email text-center">--}}
+{{--                <img  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{$investment->wallet}}">--}}
+{{--                <span class="email-text">Read the instruction below</span>--}}
 
-                <div class="email-content">
-                    <p class="free-report">You have <span>1 free report</span> remaining.</p>
-                    <p class="report">
-                        You are to send <b>{{number_format($investment->amount,2)}} of {{$investment->asset}}</b>
-                        to the address <b style="font-size:20px;" id="address">{{$investment->wallet}}</b>.<br>
-                        After making payment, contact support for instant crediting.<br/>
+{{--                <div class="email-content">--}}
+{{--                    <p class="free-report">You have <span>1 free report</span> remaining.</p>--}}
+{{--                    <p class="report">--}}
+{{--                        You are to send <b>{{number_format($investment->amount,2)}} of {{$investment->asset}}</b>--}}
+{{--                        to the address <b style="font-size:20px;" id="address">{{$investment->wallet}}</b>.<br>--}}
+{{--                        After making payment, contact support for instant crediting.<br/>--}}
 
-                        Alternatively, you can scan the Barcode above to get the wallet address:<br/>
-                    </p>
-                    <div class="text-center">
-                        <button data-clipboard-target="#address" class="default-btn copy">
-                            Copy Wallet Address
-                        </button>
-                    </div>
-                    <p class="dastone">Thanks for choosing <span>{{$siteName}}</span> <br/></p>
-                </div>
-            </div>
-        </div>
-    @endif
+{{--                        Alternatively, you can scan the Barcode above to get the wallet address:<br/>--}}
+{{--                    </p>--}}
+{{--                    <div class="text-center">--}}
+{{--                        <button data-clipboard-target="#address" class="default-btn copy">--}}
+{{--                            Copy Wallet Address--}}
+{{--                        </button>--}}
+{{--                    </div>--}}
+{{--                    <p class="dastone">Thanks for choosing <span>{{$siteName}}</span> <br/></p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    @endif--}}
 
 @endsection

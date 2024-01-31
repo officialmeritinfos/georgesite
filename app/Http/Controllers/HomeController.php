@@ -42,6 +42,32 @@ class HomeController extends Controller
 
         return view('home.about',$dataView);
     }
+    public function mission()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'Mission',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.mission',$dataView);
+    }
+    public function values()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'Value',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.values',$dataView);
+    }
     public function plans()
     {
         $web = GeneralSetting::where('id',1)->first();
@@ -280,6 +306,32 @@ class HomeController extends Controller
         ];
 
         return view('home.career',$dataView);
+    }
+    public function atm()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'Bitcoin ATM',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.atm',$dataView);
+    }
+    public function tesla()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'Tesla',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.tesla',$dataView);
     }
 }
 

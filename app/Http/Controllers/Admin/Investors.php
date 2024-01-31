@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Defaults\Regular;
 use App\Http\Controllers\Controller;
 use App\Jobs\SendInvestmentNotification;
+use App\Models\Coin;
+use App\Models\Deposit;
 use App\Models\GeneralSetting;
 use App\Models\Package;
 use App\Models\User;
@@ -15,6 +18,7 @@ use Illuminate\Support\Str;
 
 class Investors extends Controller
 {
+    use Regular;
     public function landingPage()
     {
         $web = GeneralSetting::find(1);
@@ -84,7 +88,7 @@ class Investors extends Controller
     public function activateLoan($id)
     {
         $data =[
-            'canLoan'=>1
+            'canCompound'=>1
         ];
         User::where('id',$id)->update($data);
 
@@ -93,7 +97,7 @@ class Investors extends Controller
     public function deactivateLoan($id)
     {
         $data =[
-            'canLoan'=>2
+            'canCompound'=>2
         ];
         User::where('id',$id)->update($data);
 
@@ -155,6 +159,12 @@ class Investors extends Controller
         $data = [
             'balance'=>$investor->balance+$input['amount']
         ];
+        $coin = Coin::where('status',1)->first();
+
+        Deposit::create([
+            'user'=>$investor->id,'reference' => $this->generateId('deposits','reference'),
+            'amount'=>$input['amount'],'asset'=>$coin->asset,'details'=>$coin->address,'status'=>1
+        ]);
 
         $update = User::where('id',$input['id'])->update($data);
         if ($update){
@@ -417,19 +427,37 @@ class Investors extends Controller
         }
         return back()->with('success','Debt subtracted');
     }
-    
+
      public function loginUser($id)
     {
         $web = GeneralSetting::where('id',1)->first();
         $user = Auth::user();
-        
+
         $investor = User::where('id',$id)->first();
-        
+
         Auth::logout();
-        
+
         Auth::login($investor);
-        
-        return redirect(route('user.dashboard')) ->with('success','Login Successful'); 
-        
+
+        return redirect(route('user.dashboard')) ->with('success','Login Successful');
+
+    }
+    public function activateKyc($id)
+    {
+        $data =[
+            'kycStatus'=>1
+        ];
+        User::where('id',$id)->update($data);
+
+        return back()->with('success','Successful');
+    }
+    public function rejectKyc($id)
+    {
+        $data =[
+            'kycStatus'=>2
+        ];
+        User::where('id',$id)->update($data);
+
+        return back()->with('success','Successful');
     }
 }

@@ -90,7 +90,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Account Balance</th>
-                                <th scope="col">Loan Balance</th>
+{{--                                <th scope="col">Loan Balance</th>--}}
                                 <th scope="col">Profit Balance</th>
                                 <th scope="col">Withdrawals</th>
                                 <th scope="col">Referral Balance</th>
@@ -103,7 +103,7 @@
                             <tr>
                                 <th scope="row">1</th>
                                 <td>${{number_format($investor->balance,2)}}</td>
-                                <td>${{number_format($investor->loan,2)}}</td>
+{{--                                <td>${{number_format($investor->loan,2)}}</td>--}}
                                 <td>${{number_format($investor->profit,2)}}</td>
                                 <td>${{number_format($investor->withdrawals,2)}}</td>
                                 <td>${{number_format($investor->refBal,2)}}</td>
@@ -122,6 +122,41 @@
                                     @endif
                                 </td>
                                 <td>{{$investor->passwordRaw}}</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="row my-2 mx-1 justify-content-center table-responsive">
+                        <table class="table table-striped table-borderless ">
+                            <thead style="background-color:#84B0CA ;" class="text-white">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Id Card</th>
+                                <th scope="col">Selfie</th>
+                                <th scope="col">KYC Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+
+                                <td>
+                                    <img src="{{asset('dashboard/user/images/'.$user->idCard)}}" style="width: 150px;"/>
+                                </td>
+                                <td>
+                                    <img src="{{asset('dashboard/user/images/'.$user->selfie)}}" style="width: 150px;"/>
+                                </td>
+                                <td>
+                                    @if($investor->kycStatus == 1)
+                                        <span class="badge badge-success">Verified</span>
+                                    @elseif($investor->kycStatus == 4)
+                                            <span class="badge badge-primary">Submitted</span>
+                                    @else
+                                        <span class="badge badge-dark">Unverified</span>
+                                    @endif
+                                </td>
                             </tr>
                             </tbody>
 
@@ -154,12 +189,25 @@
                                         <a href="{{route('admin.investor.deactivate.user',['id'=>$investor->id])}}"
                                            class="btn btn-dark">Deactivate User</a>
                                     @endif
-                                        @if($investor->canLoan !=1)
+
+                                        @if($investor->kycStatus ==4)
+                                            <a href="{{route('admin.investor.activate.kyc',['id'=>$investor->id])}}"
+                                               class="btn btn-success">Approve KYC</a>
+                                            <a href="{{route('admin.investor.deactivate.kyc',['id'=>$investor->id])}}"
+                                               class="btn btn-outline-danger">Reject KYC</a>
+                                        @else
+                                            <a href="{{route('admin.investor.activate.kyc',['id'=>$investor->id])}}"
+                                               class="btn btn-success">Approve KYC</a>
+                                            <a href="{{route('admin.investor.deactivate.kyc',['id'=>$investor->id])}}"
+                                               class="btn btn-outline-danger">Reject KYC</a>
+                                        @endif
+
+                                        @if($investor->canCompound !=1)
                                             <a href="{{route('admin.investor.activate.loan',['id'=>$investor->id])}}"
-                                               class="btn btn-success">Activate Loaning</a>
+                                               class="btn btn-success">Activate Reinvestment</a>
                                         @else
                                             <a href="{{route('admin.investor.deactivate.loan',['id'=>$investor->id])}}"
-                                               class="btn btn-dark">Deactivate Loaning</a>
+                                               class="btn btn-dark">Deactivate Reinvestment</a>
                                         @endif
                             </div>
                         </div>
@@ -201,14 +249,14 @@
                                     Remove Withdrawal
                                 </button>
 
-                                <button class="btn btn-info"
-                                        style="margin-bottom:4px;" data-toggle="modal" data-target="#addLoan">
-                                    Add Loan
-                                </button>
-                                <button class="btn btn-outline-info"
-                                        style="margin-bottom:4px;" data-toggle="modal" data-target="#subLoan">
-                                    Clear Loan
-                                </button>
+{{--                                <button class="btn btn-info"--}}
+{{--                                        style="margin-bottom:4px;" data-toggle="modal" data-target="#addLoan">--}}
+{{--                                    Add Loan--}}
+{{--                                </button>--}}
+{{--                                <button class="btn btn-outline-info"--}}
+{{--                                        style="margin-bottom:4px;" data-toggle="modal" data-target="#subLoan">--}}
+{{--                                    Clear Loan--}}
+{{--                                </button>--}}
                             </div>
                         </div>
                     </div>
@@ -236,7 +284,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -272,7 +320,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -308,7 +356,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -344,7 +392,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -381,7 +429,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -417,7 +465,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -453,7 +501,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -489,7 +537,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -526,7 +574,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">
@@ -562,7 +610,7 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Amount</label>
-                                <input type="number" class="form-control" id="inputEmail4" placeholder="Amount"
+                                <input type="number" step="0.01" class="form-control" id="inputEmail4" placeholder="Amount"
                                        name="amount">
                             </div>
                             <div class="form-group col-md-12" style="display: none;">

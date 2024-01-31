@@ -52,6 +52,8 @@ Route::post('update-password',[Settings::class,'processPassword'])->name('passwo
 Route::post('update-photo',[Settings::class,'processPhoto'])->name('photo.update');
 /*================ REFERRAL ROUTE ====================*/
 Route::get('referral',[Referrals::class,'landingPage'])->name('referral.index');
+Route::get('kyc',[Settings::class,'kyc'])->name('kyc.index');
+Route::post('kyc/upload',[Settings::class,'processKyc'])->name('kyc.submit');
 /*================ CHART ROUTE ====================*/
 
 Route::get('/earnings/chart/{userId}', function ($userId) {

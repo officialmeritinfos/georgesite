@@ -23,7 +23,7 @@ class Custom{
     public function getReturnType($id)
     {
         $type = ReturnType::where('id',$id)->first();
-        return $type->name;
+        return $type->name??'N/A';
     }
     //get user's earning in a day
     public function userDailyEarning($user)

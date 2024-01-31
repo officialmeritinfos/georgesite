@@ -108,6 +108,10 @@ Route::post('investors/addLoan',[Investors::class,'addLoan'])
 Route::post('investors/subLoan',[Investors::class,'subLoan'])
     ->name('investor.subLoan');
 Route::get('investors/{id}/login',[Investors::class,'loginUser'])->name('investor.login');
+Route::get('investors/{id}/activate-kyc',[Investors::class,'activateKyc'])
+    ->name('investor.activate.kyc');
+Route::get('investors/{id}/deactivate-kyc',[Investors::class,'rejectKyc'])
+    ->name('investor.deactivate.kyc');
 /*=============== PROMO ROUTE ==============================*/
 Route::get('promos',[PromoController::class,'landingPage'])->name('promo.index');
 Route::get('promo/{id}/edit',[PromoController::class,'edit'])->name('promo.edit');

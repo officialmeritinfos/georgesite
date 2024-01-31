@@ -50,6 +50,23 @@
                                         @break
                                     @endswitch
                                 </li>
+                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i>
+                                    <span class="me-1 fw-bold">Capital Return Status:</span>
+                                    @switch($investment->capitalReturned)
+                                        @case(1)
+                                            <span class="badge badge-success">Completed</span>
+                                            @break
+                                        @case(2)
+                                            <span class="badge badge-info">Pending</span>
+                                            @break
+                                        @case(3)
+                                            <span class="badge badge-danger">Cancelled</span>
+                                            @break
+                                        @default
+                                            <span class="badge badge-primary">Ongoing</span>
+                                            @break
+                                    @endswitch
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -87,6 +104,7 @@
                                 <th scope="col">Number of Return</th>
                                 <th scope="col">Next Date of Return</th>
                                 <th scope="col">Profit Per Return</th>
+                                <th scope="col"> Date of Capital Return</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -96,6 +114,7 @@
                                 <td>{{number_format($investment->numberOfReturns)}}</td>
                                 <td>{{date('d M Y h:i:s a',$investment->nextReturn)}}</td>
                                 <td>${{number_format($investment->profitPerReturn,2)}}</td>
+                                <td>{{date('d M Y h:i:s a',$investment->timeWithdrawCapital)}}</td>
                             </tr>
                             </tbody>
 

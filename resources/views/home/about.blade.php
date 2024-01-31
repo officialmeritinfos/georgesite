@@ -1,128 +1,82 @@
 @extends('home.base')
 @section('content')
-    <!-- Start Page Title Area -->
-    <div class="page-title-area">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}} </h2>
-                <ul>
-                    <li>
-                        <a href="{{url('/')}}">
-                            Home
-                        </a>
-                    </li>
-                    <li>{{$pageName}} </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Page Title Area -->
 
-    <!-- Start About Area -->
-    <section class="about-area pb-100" style="margin-top: 5rem;">
+    <section class="page-header" style="background-image: url({{asset('home/lassets/images/background/inner-banner-bg.png')}}");">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="{{asset('home/img/about-img-three.png')}}" alt="Image">
+            <h2>{{$pageName}}</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
+
+    <!--About Four Start-->
+    <section class="about-four">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="about-four__left">
+                        <div class="about-four__img-box">
+
+                            <div class="about-four__img-two">
+                                <img src="{{asset('home/img/office.jpg')}}" alt="">
+                            </div>
+                            <div class="about-four__shape-1 img-bounce"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <span>About Us</span>
-                        <h2>We make it possible using revolutionary solutions</h2>
-                        <p>Welcome to {{$siteName}}, where financial innovation meets investment excellence. Founded with a vision to redefine wealth creation, we stand at the forefront of the financial industry, combining cutting-edge technology with seasoned expertise. Our journey began with a commitment to empower individuals to navigate the complexities of the financial landscape, and today, {{$siteName}} stands as a beacon of trust and success in the world of investments.</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        Advanced caching
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        Unlimited  solutions
-                                    </li>
-                                </ul>
+                <div class="col-xl-6">
+                    <div class="about-four__right">
+                        <div class="section-title text-left">
+                            <div class="section-title__tagline-box">
+                                <span class="section-title__tagline">Welcome to {{$siteName}}</span>
                             </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        24/7 Free extra support
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-checked"></i>
-                                        Optimized stack
-                                    </li>
-                                </ul>
-                            </div>
+                            <h2 class="section-title__title">Get to Know About
+                                Our <span>Company</span></h2>
                         </div>
+                        <p class="about-four__text">
+                            Welcome to {{$siteName}}, where financial innovation meets investment excellence. Founded with a vision to redefine wealth creation, we stand at the forefront of the financial industry, combining cutting-edge technology with seasoned expertise. Our journey began with a commitment to empower individuals to navigate the complexities of the financial landscape, and today, {{$siteName}} stands as a beacon of trust and success in the world of investments.</p>
+
+                        <p class="about-one__text">
+
+                            At {{$siteName}}, we strive to be a leading force in the investment industry by harnessing the power of
+                            artificial intelligence and expert insights. Our mission is to provide our clients with a comprehensive
+                            range of investment opportunities, including Cryptocurrency, Medical Cannabis, Gold and Oil Mining, Stocks
+                            and Forex Trading, Retirement Planning, and Real Estate. We are dedicated to delivering sustainable and
+                            high returns while prioritizing transparency, integrity, and client success. Through continuous innovation
+                            and a client-centric approach, we aim to redefine the landscape of wealth creation and retirement planning.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="about-four__right">
+                        <div class="section-title text-left">
+                            <div class="section-title__tagline-box">
+                                <span class="section-title__tagline">Empowering People</span>
+                            </div>
+                            <h2 class="section-title__title"></h2>
+                        </div>
+                        <p class="about-one__text">
+
+                            Empowering individuals to achieve financial freedom and security through innovative investment solutions, cutting-edge technology, and a commitment to excellence.
+
+                        <p>
+                            At {{$siteName}}, our commitment to excellence extends to every facet of our services. We take pride in offering a suite of trusted and reliable services designed to meet the diverse needs of our clients. Our expertise spans across Cryptocurrency Investment, Medical Cannabis, Gold and Oil Mining, Stocks and Forex Trading, Retirement Planning, and Real Estate investment.
+                        </p>
+                        <p>
+                            What sets our services apart is the integration of cutting-edge AI technology, providing our clients with sophisticated solutions and higher returns guaranteed. Our team of seasoned professionals is dedicated to maintaining the highest standards of transparency, integrity, and reliability, ensuring that our clients can trust us with their financial goals.
+                        </p>
+                        <p>
+                            Whether you are a seasoned investor or just starting on your financial journey, {{$siteName}} is here to be your trusted partner. We understand the importance of building long-term relationships based on trust, and our commitment to your success is at the core of everything we do.
+                        </p>
+                        </p>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End About Area -->
+    <!--About Four End-->
 
-    <!-- Start Business Area -->
-    <section class="business-area ptb-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="business-content">
-                        <h2>Plan for the future with {{$siteName}}</h2>
-                    </div>
-                    <div class="single-business">
-                        <i class="flaticon-chip"></i>
-                        <h3>Strategic Wealth Planning</h3>
-                        <p>At {{$siteName}}, we believe in more than just investing; we believe in strategic wealth planning. Our team of experts collaborates with you to craft a personalized roadmap for financial success. From short-term gains to long-term legacies, we meticulously plan every step, ensuring your investments align with your aspirations. Join us in redefining the art of wealth creation through strategic planning and astute decision-making.</p>
-                    </div>
-                    <div class="single-business">
-                        <i class="flaticon-blockchain"></i>
-                        <h3>Discover Your Financial Horizon</h3>
-                        <p>Embark on a personalized financial journey with {{$siteName}}, where we help you uncover the vast potential of your financial horizon. Our tailored strategies and innovative solutions are designed to align with your unique goals, ensuring a path to prosperity that's as individual as you are. Let {{$siteName}} be your compass as you navigate towards a secure and rewarding financial future.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="100">00</span> <span class="target">M+</span>
-                                </h2>
-                                <p>Payouts made</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="90">00</span> <span class="target">+</span>
-                                </h2>
-                                <p>Staff</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="80">00</span> <span class="target">k+</span>
-                                </h2>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 counter-nth">
-                            <div class="single-counter">
-                                <h2>
-                                    <span class="odometer" data-count="5">00</span> <span class="target">+</span>
-                                </h2>
-                                <p>Awards Won</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Business Area -->
+
+
 
 @endsection

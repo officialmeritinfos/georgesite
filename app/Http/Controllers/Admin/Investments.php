@@ -51,14 +51,16 @@ class Investments extends Controller
         $web = GeneralSetting::find(1);
 
         $investment = Investment::where('id',$id)->first();
-        
+
         $type = ReturnType::where('id',$investment->returnType)->first();
-        
+
         $timeReturn = strtotime($type->duration,time());
-        
+        $capitalDuration = strtotime($investment->capitalDuration,time());
+
         $investment->status = 4;
-        
+
         $investment->nextReturn = $timeReturn;
+        $investment->timeWithdrawCapital = $capitalDuration;
 
         $investment->save();
 
@@ -92,7 +94,8 @@ class Investments extends Controller
 
         $dateInvestment = [
             'status'=>1,
-            'currentReturn'=>$investment->numberOfReturns
+            'currentReturn'=>$investment->numberOfReturns,
+            'capitalReturned'=>1
         ];
 
         $dataUser=[
@@ -112,7 +115,7 @@ class Investments extends Controller
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Investment Completion');
 
             $investor->notify(new InvestmentMail($investor, $userMessage, 'Investment Completion'));
-            
+
             $admin = User::where('is_admin', 1)->first();
             //send mail to Admin
             if (!empty($admin)) {

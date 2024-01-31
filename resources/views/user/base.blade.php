@@ -76,16 +76,30 @@
             </li>
 
             <li>
-                <a href="{{url('account/new_investment')}}" class="box-style">
+                <a href="{{url('account/new_deposit')}}" class="box-style">
                     <i class="bx bx-chart"></i>
                     <span class="menu-title">New Deposit</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{url('account/investments')}}" class="box-style">
+                <a href="{{url('account/deposits')}}" class="box-style">
                     <i class="bx bx-file-blank"></i>
                     <span class="menu-title">Deposits</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{url('account/new_investment')}}" class="box-style">
+                    <i class="bx bx-chart"></i>
+                    <span class="menu-title">New Investment</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{url('account/investments')}}" class="box-style">
+                    <i class="bx bx-file-blank"></i>
+                    <span class="menu-title">Investments</span>
                 </a>
             </li>
 
@@ -121,6 +135,12 @@
                 <a href="{{url('account/settings')}}" class="box-style">
                     <i class="bx bx-cog"></i>
                     <span class="menu-title">Settings </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('kyc.index')}}" class="box-style">
+                    <i class="bx bx-shield"></i>
+                    <span class="menu-title">KYC </span>
                 </a>
             </li>
 

@@ -37,6 +37,19 @@
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
                             <span class="today">Account Balance</span>
+                            <h6>${{number_format($user->balance,2)}}</h6>
+                        </div>
+
+                        <div class="flex-shrink-0 align-self-center">
+                            <img src="{{asset('dashboard/user/images/icon/user.png')}}" alt="Images">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-today-card d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <span class="today">Profit Balance</span>
                             <h6>${{number_format($user->profit,2)}}</h6>
                         </div>
 
@@ -120,11 +133,41 @@
                                 <div class="col-lg-3 col-sm-6 col-md-3">
                                     <div class="active-single-item">
                                         <p>
+                                            <img src="{{asset('dashboard/user/images/icon/discount-2.png')}}" alt="Images">
+                                            Pending Deposits
+                                            <span>{{number_format($pendingDeposit->count(),2)}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-md-3">
+                                    <div class="active-single-item">
+                                        <p>
+                                            <img src="{{asset('dashboard/user/images/icon/discount-2.png')}}" alt="Images">
+                                            Completed Deposits
+                                            <span>{{number_format($completedDeposit->count(),2)}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-md-3">
+                                    <div class="active-single-item">
+                                        <p>
                                             <img src="{{asset('dashboard/user/images/icon/user-2.png')}}" alt="Images">
                                             Ongoing Investments
                                             <span>
                                                 {{number_format($ongoingInvestments->count(),2)}}
                                             </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-3 col-sm-6 col-md-3">
+                                    <div class="active-single-item">
+                                        <p>
+                                            <img src="{{asset('dashboard/user/images/icon/discount-2.png')}}" alt="Images">
+                                            Pending Investments
+                                            <span>{{number_format($pendingInvestment->count(),2)}}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -135,16 +178,6 @@
                                             <img src="{{asset('dashboard/user/images/icon/curser.png')}}" alt="Images">
                                             Completed Investments
                                             <span>{{number_format($completedInvestments->count(),2)}}</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6 col-md-3">
-                                    <div class="active-single-item">
-                                        <p>
-                                            <img src="{{asset('dashboard/user/images/icon/discount-2.png')}}" alt="Images">
-                                            Pending Deposits
-                                            <span>{{number_format($pendingDeposit->count(),2)}}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -180,7 +213,7 @@
 
     <div class="latest-transaction-area">
         <div class="container-fluid">
-            <div class="table-responsive" data-simplebar>
+            <div class="table-responsive " data-simplebar>
                 <h5 class="mb-2">Most Recent Transactions</h5>
                 <table class="table align-middle mb-0">
                     <thead>
@@ -247,6 +280,52 @@
         </div>
     </div>
     <br><br>
+<div>
+    <!-- TradingView Widget BEGIN -->
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"><span class="blue-text">Forex Rates</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+            {
+                "width": "100%",
+                "height": "700",
+                "currencies": [
+                "EUR",
+                "USD",
+                "JPY",
+                "GBP",
+                "CHF",
+                "AUD",
+                "CAD",
+                "NZD",
+                "CNY"
+            ],
+                "isTransparent": false,
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget END -->
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+            {
+                "width": "100%",
+                "height": 490,
+                "defaultColumn": "overview",
+                "screener_type": "crypto_mkt",
+                "displayCurrency": "BTC",
+                "colorTheme": "light",
+                "locale": "en"
+            }
+        </script>
+    </div>
 
     @push('js')
         <script>

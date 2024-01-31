@@ -1,27 +1,15 @@
 @extends('home.base')
 @section('content')
-    <!-- Start Page Title Area -->
-    <div class="page-title-area">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}} </h2>
-                <ul>
-                    <li>
-                        <a href="{{url('/')}}">
-                            Home
-                        </a>
-                    </li>
-                    <li>Service</li>
-                    <li>{{$pageName}} </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Page Title Area -->
+
+    <section class="page-header" style="background-image: url({{asset('home/lassets/images/background/inner-banner-bg.png')}}");">
+    <div class="container">
+        <h2>{{$pageName}}</h2>
+    </div><!-- /.container -->
+    </section><!-- /.page-header -->
 
 
     <!-- End Service Details Area -->
-    <section class="service-details-area ptb-100">
+    <section class="service-details-area ptb-100" style="margin-bottom: 5rem; margin-top: 5rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
