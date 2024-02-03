@@ -661,7 +661,7 @@
                         <div class="mt-4">
                             <div class="uk-text-center monee-fee-wrapper">
                                 <h3 class="uk-text-uppercase uk-margin-remove-bottom">Investment</h3>
-                                <h1 class="uk-margin-remove-top"> <span class="monee-currency">$</span> <span class="monee-fee">100</span> </h1>
+                                <h1 class="uk-margin-remove-top"> <span class="monee-currency">$</span> <span class="monee-fee">{{$web->minDeposit}}</span> </h1>
                                 <p class="uk-margin-remove-top uk-margin-remove-bottom">Minimum investment rate</p>
 
                             </div>
