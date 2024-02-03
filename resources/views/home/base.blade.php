@@ -111,7 +111,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="{{url('cryptocurrency')}}">Cryptocurrency</a></li>
                                         <li><a href="{{url('retirement')}}">Pension Funds</a></li>
-                                        <li><a href="{{url('forex')}}">FOREX (PAMM/MAM)</a></li>
+{{--                                        <li><a href="{{url('forex')}}">FOREX (PAMM/MAM)</a></li>--}}
                                     </ul>
                                 </li>
 

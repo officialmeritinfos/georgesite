@@ -696,7 +696,7 @@
                         </span>
 
                 </p>
-                <a href="https://app.companiesoffice.govt.nz/co/4579919" target="_blank" class="btn">View Company Certificate</a>
+{{--                <a href="https://app.companiesoffice.govt.nz/co/4579919" target="_blank" class="btn">View Company Certificate</a>--}}
             </div>
         </div>
     </section>
@@ -718,26 +718,26 @@
     </div>
     <!-- TradingView Widget END -->
 
-    <section style="padding: 0 !important; margin-top: 0px;">
-        <div class="uk-container uk-container-expand uk-background-primary uk-light" style="max-width: none !important;">
-            <div class="uk-container uk-margin-large-top uk-margin-medium-bottom">
-                <div class="uk-grid">
-                    <div class="uk-width-4-5@l uk-width-1-1@s uk-align-center">
-                        <div class="idz-icon-circle large white uk-float-left uk-margin-top uk-margin-medium-right idz-content-adjust3">
-                            <i class="fa fa-5x fa-percent"></i>
-                        </div>
-                        <h2 class="uk-margin-small-bottom uk-margin-remove-top uk-text-center c-w" style="color: #fff !important;">Earn more - invest tax-free</h2>
-                        <p class="uk-margin-remove-top uk-text-lead uk-text-center c-w">The Government lets you
-                            invest up to £20,000 each year tax-free in an ISA. You can 'wrap' any {{$siteName}} investment in an ISA, so that you don't pay tax on the interest you earn, and you can
-                            transfer in any other ISAs you have and invest those too.
+{{--    <section style="padding: 0 !important; margin-top: 0px;">--}}
+{{--        <div class="uk-container uk-container-expand uk-background-primary uk-light" style="max-width: none !important;">--}}
+{{--            <div class="uk-container uk-margin-large-top uk-margin-medium-bottom">--}}
+{{--                <div class="uk-grid">--}}
+{{--                    <div class="uk-width-4-5@l uk-width-1-1@s uk-align-center">--}}
+{{--                        <div class="idz-icon-circle large white uk-float-left uk-margin-top uk-margin-medium-right idz-content-adjust3">--}}
+{{--                            <i class="fa fa-5x fa-percent"></i>--}}
+{{--                        </div>--}}
+{{--                        <h2 class="uk-margin-small-bottom uk-margin-remove-top uk-text-center c-w" style="color: #fff !important;">Earn more - invest tax-free</h2>--}}
+{{--                        <p class="uk-margin-remove-top uk-text-lead uk-text-center c-w">The Government lets you--}}
+{{--                            invest up to £20,000 each year tax-free in an ISA. You can 'wrap' any {{$siteName}} investment in an ISA, so that you don't pay tax on the interest you earn, and you can--}}
+{{--                            transfer in any other ISAs you have and invest those too.--}}
 
-                            <span class="uk-text-bold">For investors in the United Kingdom (UK) only.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--                            <span class="uk-text-bold">For investors in the United Kingdom (UK) only.</span>--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 
 
