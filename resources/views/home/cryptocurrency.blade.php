@@ -442,7 +442,7 @@
                         <div class="card mb-5 mb-lg-0">
                             <div class="card-body">
                                 <h5 class="card-title text-muted text-uppercase text-center">{{$package->name}}</h5>
-                                <h6 class="card-price text-center">{{$package->roi}}%<span class="period">/{{$option->getReturnType($package->returnType)}} For {{$package->Duration}}</span></h6>
+                                <h6 class="card-price text-center">{{$package->roi}}%<span class="period">/{{$option->getReturnType($package->returnType)}} </span></h6>
                                 <hr>
                                 <ul>
                                     <li><b>Investment</b>: ${{$package->minAmount}} - @if($package->isUnlimited !=1)
