@@ -802,55 +802,55 @@
 
     </style>
 
-    <section data-animate="fadeIn" style="padding-top: 70px; padding-bottom: 60px !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12">
-                    <h2 class="tup" style="font-size: 23px;">What our investors are saying about us</h2>
-                    <p class="lead" style="font-size: 15px">We use the reviews of our investors as the yard stick to
-                        measure how well or otherwise we are doing in the dispensation of our services to our
-                        investors all over the world. <br> We are always happy to share the positive reviews of our
-                        investors and improve on the areas we have been found wanting.</p>
-                </div>
-                <div class="col-lg-7">
-                    <div class="carousel arrows-visibile testimonial testimonial-single testimonial-left" data-items="1" data-animate-in="fadeIn" data-animate-out="fadeOut" data-arrows="false">
+{{--    <section data-animate="fadeIn" style="padding-top: 70px; padding-bottom: 60px !important;">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-5 col-md-12">--}}
+{{--                    <h2 class="tup" style="font-size: 23px;">What our investors are saying about us</h2>--}}
+{{--                    <p class="lead" style="font-size: 15px">We use the reviews of our investors as the yard stick to--}}
+{{--                        measure how well or otherwise we are doing in the dispensation of our services to our--}}
+{{--                        investors all over the world. <br> We are always happy to share the positive reviews of our--}}
+{{--                        investors and improve on the areas we have been found wanting.</p>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-7">--}}
+{{--                    <div class="carousel arrows-visibile testimonial testimonial-single testimonial-left" data-items="1" data-animate-in="fadeIn" data-animate-out="fadeOut" data-arrows="false">--}}
 
-                        <div class="testimonial-item">
-                            <img src="{{asset('home/img/reviewer2.jpg')}}" alt="">
-                            <p>I've had incredible customer service since i started investing here, I'm a repeat
-                                investor. I've been investng with {{$siteName}}. Investments for nearly 3
-                                years
-                                now and i've loved every bit of the experience so far.</p>
-                            <span>Ron DiCicco</span>
-                            <span>Florida, United States</span>
-                        </div>
-
-
-                        <div class="testimonial-item">
-                            <img src="{{asset('home/img/reviewer3.jpg')}}" alt="">
-                            <p>Transparent, profitable, and reliable bitcoin investment company that will make you
-                                real money. Thanks to all of you at {{$siteName}} for the excellent
-                                service. </p>
-                            <span>Diane Podmanik</span>
-                            <span>Budapest, Hungary</span>
-                        </div>
+{{--                        <div class="testimonial-item">--}}
+{{--                            <img src="{{asset('home/img/reviewer2.jpg')}}" alt="">--}}
+{{--                            <p>I've had incredible customer service since i started investing here, I'm a repeat--}}
+{{--                                investor. I've been investng with {{$siteName}}. Investments for nearly 3--}}
+{{--                                years--}}
+{{--                                now and i've loved every bit of the experience so far.</p>--}}
+{{--                            <span>Ron DiCicco</span>--}}
+{{--                            <span>Florida, United States</span>--}}
+{{--                        </div>--}}
 
 
-                        <div class="testimonial-item">
-                            <img src="{{asset('home/img/reviewer5.jpg')}}" alt="">
-                            <p>I have always been searching for an opportunity to earn on bitcoin and finally I
-                                found {{$siteName}} and they have proven to be very reliable since
-                                i've been investing with them.</p>
-                            <span>Joe Tantillo</span>
-                            <span>Prague, Czech Republic</span>
-                        </div>
+{{--                        <div class="testimonial-item">--}}
+{{--                            <img src="{{asset('home/img/reviewer3.jpg')}}" alt="">--}}
+{{--                            <p>Transparent, profitable, and reliable bitcoin investment company that will make you--}}
+{{--                                real money. Thanks to all of you at {{$siteName}} for the excellent--}}
+{{--                                service. </p>--}}
+{{--                            <span>Diane Podmanik</span>--}}
+{{--                            <span>Budapest, Hungary</span>--}}
+{{--                        </div>--}}
 
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
+{{--                        <div class="testimonial-item">--}}
+{{--                            <img src="{{asset('home/img/reviewer5.jpg')}}" alt="">--}}
+{{--                            <p>I have always been searching for an opportunity to earn on bitcoin and finally I--}}
+{{--                                found {{$siteName}} and they have proven to be very reliable since--}}
+{{--                                i've been investing with them.</p>--}}
+{{--                            <span>Joe Tantillo</span>--}}
+{{--                            <span>Prague, Czech Republic</span>--}}
+{{--                        </div>--}}
+
+{{--                    </div>--}}
+{{--                </div>--}}
+
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="pftb theme-bg">
         <div class="container">

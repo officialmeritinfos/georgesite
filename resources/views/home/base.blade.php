@@ -375,7 +375,7 @@
         var country = listCountries[Math.floor(Math.random() * listCountries.length)];
         var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
         var msg = 'While you are still contemplating ,an investor from <b>' + country + '</b> ' + 'just earned' + plan + ' .</a>';
-        $(".notifier .txt").html(msg);
+        $(".notifier .txt").(msg);
         $(".notifier").stop(true).fadeIn(300);
         window.setTimeout(function() {
             $(".notifier").stop(true).fadeOut(300);
