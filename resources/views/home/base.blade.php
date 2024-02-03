@@ -61,13 +61,12 @@
 
                 <style>
                     #logo .logo-dark img {
-                        width: 260px;
-                        height: 42px;
+                        width: 150px;
                         object-fit: contain;
                     }
 
                     #logo .logo-default img {
-                        width: 240px;
+                        width: 150px;
                     }
 
 
