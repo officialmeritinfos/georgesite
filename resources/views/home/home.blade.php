@@ -489,7 +489,7 @@
                         </div>
                         <div>
                             <h1 class="uk-heading-bullet" style="color: #fff !important">
-                                <span>5</span>+
+                                <span>6</span>+
                             </h1>
                             <p style="color: #fff !important;" class="tup">Years of Experience</p>
                         </div>
