@@ -546,7 +546,9 @@
                     <div class="m-b-40 f15">
                         <p style="color: #fff !important">Fixed Deposit (FD) Is an organized investment package that allows you as an investor to manage your Bitcoin account with a higher interest rate other than the ordinary investment packages,this involves depositing and making withdrawals ‘monthly or yearly’.</p>
                         <p style="color: #fff !important"> In this package, you either do the fixed deposit ‘starter plan or standard plan’ and having in mind that no withdrawals are to be made until the agreed monthly or yearly date. No separate account is needed in this package, you can start with a direct fixed deposit account or migrate from your ordinary account to it, and no fees are to be paid to do this. In a fixed investment, investors are opportune to get a 28% weekly interest for the starter plan and 56% weekly interest rate for the standard plan.. This also means that the stater plan minimum deposit is with the range of $300 to $9,999(maximum). And standard to be (minimum) $9,999 to unlimited.</p>
-                        <p style="color: #fff !important"> You are also eligible to request for a premature withdrawal from your fixed deposit funds in case of any emergency or sudden financial situations. However,as a certain amount of penalty will be paid to achieve this, having the knowledge of not withdrawing till the agreed time with cost you 5% of your investment from the company both in starter and standard plan has same deductions in this case. Furthermore, not been able to roll up with the weekly deposit of the fixed funds deposit will attract your account to be frozen by the company and to unfreeze this comes with a deposit of the Company’s ordinary minimum investment which is the deposit of $200 to activate your fixed account permanently.</p>
+                        <p style="color: #fff !important"> You are also eligible to request for a premature withdrawal from your fixed deposit funds in case of any emergency or sudden financial situations. However,as a certain amount of penalty will be paid to achieve this,
+                            having the knowledge of not withdrawing till the agreed time with cost you 5% of your investment from the company
+                            both in starter and standard plan has same deductions in this case.</p>
                         <p style="color: #fff !important"> <strong>Benefits:</strong>
                         <ul style="color:#fff!important">
                             <li>Fixed Investment allows you to accumulate more funds in a random role while investing</li>
@@ -570,11 +572,16 @@
                         <h4 style=" margin-bottom: 0; color: #fff !important;" class="tup text-left">
                             THE SEMI-ANNUAL OFFER
                         </h4>
-                        <p style="color: #fff !important"> This plan range it’s loan offer from $5,000 to $49,999. No charges or interest is required, the deadline for this loan offer is for the period of six(6) months, given a minimum Grace of two(2) weeks.</p>
+                        <p style="color: #fff !important">
+                            This plan range its loan offer from $20,000 to $49,999.The deadline for this loan offer is for the period of six(6) months, given a minimum Grace of two(2) weeks.
+                        </p>
                         <h4 style=" margin-bottom: 0; color: #fff !important;" class="tup text-left">
                             THE ANNUAL OFFER
                         </h4>
-                        <p style="color: #fff !important"> This offer range from $50,000 to $ 100,000.<br> 2% of the loan or Bitcoin borrowed will be paid as the company’s interest in low returns. It’s deadline is for the period of twelve(12) months ie within a year, minimum Grace of two(2) weeks.</p>
+                        <p style="color: #fff !important">
+                            This offer range from $50,000 to $ 100,000.
+                            It’s deadline is for the period of twelve(12) months ie within a year, minimum Grace of two(2) weeks.
+                        </p>
                     </div>
 
                 </div>
