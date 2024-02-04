@@ -318,10 +318,6 @@
                             <i class="fa fa-chart-line in-icon-wrap circle uk-box-shadow-small"></i>
                             <p class="uk-text-bold uk-margin-small-top">Retirement</p>
                         </div>
-                        <div>
-                            <i class="fa fa-chart-area in-icon-wrap circle uk-box-shadow-small"></i>
-                            <p class="uk-text-bold uk-margin-small-top">PAMM/MAMM</p>
-                        </div>
                         <!-- <div>
                             <i class="fa fa-leaf in-icon-wrap circle uk-box-shadow-small"></i>
                             <p class="uk-text-bold uk-margin-small-top">Cannabis</p>
@@ -518,15 +514,18 @@
                     </h2>
                     <div class="m-b-40 f15">
                         <p style="color: #fff !important">Fixed Deposit (FD) Is an organized investment package that allows you as an investor to manage your Bitcoin account with a higher interest rate other than the ordinary investment packages,this involves depositing and making withdrawals ‘monthly or yearly’.</p>
-                        <p style="color: #fff !important"> In this package, you either do the fixed deposit ‘starter plan or standard plan’ and having in mind that no withdrawals are to be made until the agreed monthly or yearly date. No separate account is needed in this package, you can start with a direct fixed deposit account or migrate from your ordinary account to it, and no fees are to be paid to do this. In a fixed investment, investors are opportune to get a 28% weekly interest for the starter plan and 56% weekly interest rate for the standard plan.. This also means that the stater plan minimum deposit is with the range of $300 to $9,999(maximum). And standard to be (minimum) $9,999 to unlimited.</p>
+                        <p style="color: #fff !important"> In this package, you either do the fixed deposit ‘starter plan or standard plan’ and having in mind that no withdrawals are to be made until the agreed monthly or yearly date. No separate account is needed in this package, you can start with a direct fixed deposit account or migrate from your ordinary account to it, and no fees are to be paid to do this. In a fixed investment, investors are opportune to get a 2.5% weekly interest for the starter plan and 3% weekly interest rate for the standard plan.. This also means that the stater plan minimum deposit is with the range of $50,000 to $99,999(maximum).
+                            And standard to be (minimum) $100,000 to unlimited.</p>
                         <p style="color: #fff !important"> You are also eligible to request for a premature withdrawal from your fixed deposit funds in case of any emergency or sudden financial situations. However,as a certain amount of penalty will be paid to achieve this,
                             having the knowledge of not withdrawing till the agreed time with cost you 5% of your investment from the company
                             both in starter and standard plan has same deductions in this case.</p>
                         <p style="color: #fff !important"> <strong>Benefits:</strong>
                         <ul style="color:#fff!important">
                             <li>Fixed Investment allows you to accumulate more funds in a random role while investing</li>
-                            <li>It’s a risk-free investment plan and guarantees fixed returns from the PAMM AND CySec Policy.</li>
-                            <li>Fixed Investment interest rates are earned massively at the end of the investment that the ordinary packages.</li>
+                            <li>It’s a risk-free investment plan and guarantees fixed returns.</li>
+                            <li>
+                                Fixed Investment interest rates are earned massively at the end of the investment than the ordinary packages.
+                            </li>
                         </ul>
                         </p>
                     </div>
