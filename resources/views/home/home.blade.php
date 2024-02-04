@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="slide kenburns" data-bg-image="{{asset('home/site-images/stock-trader-810.jpg')}}">
+        <div class="slide kenburns" >
             <div class="bg-overlay"></div>
             <div class="container">
                 <div class="slide-captions text-center">
@@ -448,33 +448,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="post-item border">
-                    <div class="post-item-wrap">
-                        <div class="post-slider">
-                            <div class="carousel dots-inside arrows-visible arrows-only" data-items="1" data-loop="true" data-autoplay="true" data-lightbox="gallery">
-                                <a href="{{asset('home/img/1605-trading-750x500.jpg')}}.webp" data-lightbox="gallery-image">
-                                    <img alt="" src="{{asset('home/img/1605-trading-750x500.jpg')}}.webp"></a>
-                                <a href="{{url('forex')}}" data-lightbox="gallery-image">
-                                    <img alt="" src="{{asset('home/img/pamm.jpg')}}"></a>
-                                <a href="{{asset('home/img/stock-exchange-market-concept-businessman.jpg')}}" data-lightbox="gallery-image">
-                                    <img alt="" src="{{asset('home/img/stock-exchange-market-concept-businessman.jpg')}}"></a>
-                            </div>
-                            <span class="post-meta-category"><a target="_blank" href="{{url('forex')}}">PAMM AND MAMM
-                                        FOREX</a></span>
-                        </div>
-                        <div class="post-item-description">
-
-                            <h2><a target="_blank" href="{{url('forex')}}">PAMM AND MAMM FOREX INVESTMENT
-                                    package</a>
-                            </h2>
-                            <p>{{$siteName}} PAMM Managers trade using invested capital of
-                                investors in this investment package. Any profits and losses generated
-                                will be shared between all accounts that are invested in the PAMM
-                                Manager on a proportional basis.</p>
-                            <a target="_blank" href="{{url('forex')}}" class="item-link">Learn More <i class="icon-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
 
 
             </div>
@@ -603,15 +576,12 @@
                     <div class="carousel yuwnk7826stef" data-items="1">
 
 
-                        <a target="_blank" href="{{asset('home/site-images/compressed-assets/image-0-compressed.jpg')}}" data-lightbox="gallery-image" title="Your image title here!"><img src="{{asset('home/site-images/compressed-assets/image-0-compressed.jpg')}}" alt=""></a>
-
                         <a target="_blank" href="{{asset('home/site-images/BMO_CS_TradingFloor.jpg')}}" data-lightbox="gallery-image" title="Your image title here!"><img src="{{asset('home/site-images/BMO_CS_TradingFloor.jpg')}}" alt=""></a>
 
 
 
                         <a target="_blank" href="{{asset('home/site-images/WhatWeDoPeople2x.jpg')}}" data-lightbox="gallery-image" title="Your image title here!"><img src="{{asset('home/site-images/WhatWeDoPeople2x.jpg')}}" alt=""></a>
 
-                        <a target="_blank" href="{{asset('home/site-images/compressed-assets/image-5-compressed.jpg')}}" data-lightbox="gallery-image" title="Your image title here!"><img src="{{asset('home/site-images/compressed-assets/image-5-compressed.jpg')}}" alt=""></a>
 
 
                         <a target="_blank" href="{{asset('home/site-images/team1.jpg')}}" data-lightbox="gallery-image" title="Your image title here!"><img src="{{asset('home/site-images/team1.jpg')}}" alt=""></a>
