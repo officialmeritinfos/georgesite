@@ -71,7 +71,7 @@
 
                         <p>
                             As soon as your referral starts investing, you start earning a commission.
-                            You will receive a 5% reward for each amount they deposit. This is considered a tier one
+                            You will receive a 7% reward for each amount they deposit. This is considered a tier one
                             referral program.
                             Our goal is to reward you every step of the way and help you grow your wealth. There is
                             no cap or end to those rewards for as long as any referral in your downline stays active and
@@ -114,7 +114,7 @@
                                         profit by attracting other participants as your referrals. <br> We propose
                                         you to take advantage of a convenient three-level referral system. <br> As
                                         soon as your referral starts investing, you start earning a commission. You
-                                        will receive a 5% reward for each amount they deposit.
+                                        will receive a 7% reward for each amount they deposit.
                                     </p> <a class="uk-button uk-button-primary uk-button-large uk-border-rounded" href="{{route('register')}}">Open
                                         an Account</a>
                                 </div>
