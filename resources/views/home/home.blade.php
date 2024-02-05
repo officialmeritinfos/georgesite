@@ -300,7 +300,7 @@
             <div class="uk-grid-divider uk-grid" data-uk-grid="">
                 <div class="uk-width-expand@m in-margin-top-20@s uk-first-column">
                     <h2 class="c-w" style="color: #fff !important">Investment products</h2>
-                    <p style="color: #fff !important">Choose from our array of 3 different investment packages and
+                    <p style="color: #fff !important">Choose from our array of 2 different investment packages and
                         get started investing.</p>
                 </div>
                 <div class="uk-width-2-3@m">
